@@ -23,7 +23,21 @@ public class Main {
         College college = new College("COLLEGE OF COMPUTING AND INFORMATICS", students, teachers);
 
         // Print details
-        
+        System.out.println("College Name: " + college.getName());
+
+        System.out.println("Students:");
+        for (Student student : college.getStudents()) {
+            System.out.println("Name: " + student.getName());
+            System.out.println("ID: " + student.getId());
+            System.out.println("Grades: " + Arrays.toString(student.getGrades()));
+            System.out.println();
         }
-    }
-}
+
+        System.out.println("Teachers:");
+        for (Teacher teacher : college.getTeachers()) {
+            System.out.println("Name: " + teacher.getName());
+            System.out.println("Subject: " + teacher.getSubject());
+            System.out.println();
+
+        }
+    }}
